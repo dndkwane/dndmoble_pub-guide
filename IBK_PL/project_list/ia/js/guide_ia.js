@@ -12,7 +12,6 @@ var ia = {
       + '<h1 class="g-logo">INDEX</h1>'
       + '<nav class="g-gnb">'
       + '    <ul>'
-      + '        <li><a href="index.html">가이드</a></li>'
       + '    </ul>'
       + '</nav>';
     $('.g-header').html(html_header);
