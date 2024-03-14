@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../_wsg/js/wsg_include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+<script type="text/javascript">
+	function fileAttach(obj){
+		var $this = $(obj).closest('.form-file');
+		$this.find('[type=file]').trigger('click');
+		$this.find('[type=file]').not('.is-evented').on('change', function(){
+			var value = $(this).val();
+			$this.find('[type=text]').val(value);
+		}).addClass('is-evented');
+	}
+
+jQuery(document).keydown(function(e){
+	if(e.keyCode === 37 || e.keyCode === 38 || e.keyCode === 39 || e.keyCode === 40) {
+		e.preventDefault();
+	}
+});
+//-->
+</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Colors</h1>
+				<p class="g-explain-h1">Library Elements</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Primary color</h2>
+					</div>
+          <div class="g-section-body">
+            <div>
+              <h1>Main_Blue 01</h1>
+              <span class="primary-color">test</span>
+            </div>
+          </div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+                
+								<!-- <div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">API</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+									<a href="javascript:;" class="g-example-btn">SCSS</a>
+								</div> -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<!-- Constrols -->
+									.form-input		: 폼 컨트롤 인풋
+									.form-select	: 폼 컨트롤 셀렉트
+									.form-check		: 폼 컨트롤 체크박스
+									.form-radio		: 폼 컨트롤 라디오
+									.form-switch	: 폼 컨트롤 스위치
+									.form-file		: 폼 컨트롤 파일
+
+									<!-- Texts -->
+									.form-label		: 폼 텍스트 레이블
+									.form-text		: 폼 텍스트 기본
+									.form-desc		: 폼 텍스트 기술설명
+									.form-alert		: 폼 텍스트 경고메시지
+									.form-info		: 폼 텍스트 관련정보안내
+									.form-split		: 폼 텍스트 구분기호
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+                                    /*-------------------------------------------------------------------
+										## Form
+									-------------------------------------------------------------------*/
+									/* Default */
+									input:-ms-input-placeholder, textarea:-ms-input-placeholder {color:#999;}/* IE 10 + */
+									input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color:#999;}/* Webkit Browser */
+									input:-moz-placeholder, textarea:-moz-placeholder {color:#999;}/* Mozilla Firefox 4 to 18 */
+									input::-moz-placeholder, textarea::-moz-placeholder {color:#999;}/* Mozilla Firefox 19+ */
+									input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {color:transparent;}/* IE 10 + */
+									input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {color:transparent;}/* Webkit Browser */
+									input:focus:-moz-placeholder, textarea:focus:-moz-placeholder {color:transparent;}/* Mozilla Firefox 4 to 18 */
+									input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {color:transparent;}/* Mozilla Firefox 19+ */
+									input {box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; border:0px; vertical-align:middle;}
+									textarea {width:100%; vertical-align:middle; resize:none;}
+									select {appearance:none; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none;}
+									select::-ms-expand {display:none;}
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+                                    /*-------------------------------------------------------------------
+                                        ## Variables
+                                    -------------------------------------------------------------------*/
+                                    $color-primary: #2496ee;
+                                    @mixin ui-input-outlined {
+                                        height:45px; padding:0 15px; border:1px solid #ddd; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); font-size: 14px; line-height: 1.5; transition:all 0.3s;
+                                        &:hover {border-color: #222;}
+                                        &:focus {border-color: $color-primary; color: $color-primary;}
+                                        &:disabled {background-color: #fafafa; opacity: 0.75;}
+                                        &:disabled:hover {border-color: #999; opacity: 0.75;}
+                                    }
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+      <!-- //g-content-body -->
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>
