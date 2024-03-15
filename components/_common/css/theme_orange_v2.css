@@ -41,7 +41,7 @@
 -------------------------------------------------------------------*/
 @media only screen and (max-width: 720px) {
     .g-lnb {padding: 0; margin: 0;}
-    .g-lnb > .g-node-title {color:#ff5400; background-color:#fff;}
-    .g-lnb > ul {background-color:#ff5400;}
+    .g-lnb > .g-node-title {color:#004C9D; background-color:#fff;}
+    .g-lnb > ul {background-color:#004C9D;}
     .g-lnb > ul > li.is-current > a {background-color: transparent; color: #fff;}
 }

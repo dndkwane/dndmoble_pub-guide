@@ -1,0 +1,28 @@
+
+// flex
+@mixin flex($direction: row, $justify-content: space-between, $align-items: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin flex-item($flex-grow: 0, $flex-shrink: 1, $flex-basis: auto) {
+  flex-grow: $flex-grow;
+  flex-shrink: $flex-shrink;
+  flex-basis: $flex-basis;
+}
+
+// bg이미지
+@mixin image-style($ul,$size,$repeat,$positionX:50%, $positionY:50%){  // 
+  background: {
+    image:url($ul);
+    size:$size;
+    repeat:$repeat;
+    position: $positionX, $positionY;
+  }
+
+}
+
+// h1, h2, h3
+$font-sizes : ('h1':4.5rem, 'h2':2rem, "h3":1.6rem);

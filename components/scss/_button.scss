@@ -1,0 +1,104 @@
+.button {
+  & {
+    line-height: 1.8rem;
+  }
+  > strong {
+    font-weight: 500;
+  }
+  &.style-1.primary {
+    background: $main-blue;
+    border-color: $main-blue;
+    color: #fff
+  }
+  &.wide {
+    height: 6rem;
+  }
+  &.wide-sub {
+    width: auto;
+    height: 4.6rem;
+  }
+  /* &.style-1.primary:hover,
+  &.style-1.primary:focus {
+    background: #ea1b00;
+    border-color: #ea1b00
+  } */
+  &.style-2:hover,
+  &.style-2:focus {
+    border-color: #222;
+    color: #000
+  }
+  &.style-2:disabled {
+    opacity: .5
+  }
+  &.style-2.primary {
+    border-color: $main-blue;
+    color: $main-blue
+  }
+  /* &.style-2.primary:hover,
+  &.style-2.primary:focus {
+    border-color: #ea1b00
+  }
+  */
+  &.style-3.primary {
+    background: $main-blue;
+    border-color: $main-blue;
+    color: #fff
+  }
+  /* &.style-3.primary:hover,
+  &.style-3.primary:focus {
+    background: #ea1b00;
+    border-color: #ea1b00
+  } */
+  
+  &.style-4.primary {
+    border-color: $main-blue;
+    color: $main-blue;
+  }
+  /* &.style-4.primary:hover,
+  &.style-4.primary:focus {
+    border-color: #ea1b00
+  } */
+  &.style-5.primary {
+    background: $main-blue;
+    border-color: $main-blue;
+    color: #fff
+  }
+  /* &.style-5.primary:hover,
+  &.style-5.primary:focus {
+    background: #ea1b00;
+    border-color: #ea1b00
+  } */
+  &.style-6.primary {
+    border-color: $main-blue;
+    color: $main-blue;
+  }
+  /* &.style-6.primary:hover,
+  &.style-6.primary:focus {
+    border-color: #ea1b00
+  } */
+  &.wide {
+    width: 100%!important;
+  }
+}
+
+.btn-wrap {
+  @include flex();
+  &.pick-btn {
+    .style-4:hover,
+    .style-4:focus {
+      border-color: $main-blue;
+      font-weight: 500;
+    }
+  }
+  
+  &.flex-wrap {
+    flex-wrap: wrap;
+    > button {
+      display: block;
+      flex: 1 0 0;
+      + button {
+        margin-left: .85rem;
+      }
+    }
+  }
+}

@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "NotoSans";
-  font-weight: 400;
+  font-weight: normal;
   src: url('../fonts/NotoSans-Regular.eot');
   src: local('â€»'), url('../fonts/NotoSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans-Regular.woff') format('woff');
 }

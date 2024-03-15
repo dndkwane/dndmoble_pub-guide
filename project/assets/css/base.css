@@ -1,16 +1,42 @@
 @charset "utf-8";
-/*-------------------------------------------------------------------
-	분류그룹 : 초기화
-	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
--------------------------------------------------------------------*/
+
 /*-------------------------------------------------------------------
 	@Fonts
 -------------------------------------------------------------------*/
-@font-face {font-family:"NotoSans"; font-weight:100; src:url('../fonts/NotoSans-Thin.eot'); src:local('※'), url('../fonts/NotoSans-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans-Thin.woff') format('woff');}
-@font-face {font-family:"NotoSans"; font-weight:300; src:url('../fonts/NotoSans-Light.eot'); src:local('※'), url('../fonts/NotoSans-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans-Light.woff') format('woff');}
-@font-face {font-family:"NotoSans"; font-weight:400; src:url('../fonts/NotoSans-Regular.eot'); src:local('※'), url('../fonts/NotoSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans-Regular.woff') format('woff');}
-@font-face {font-family:"NotoSans"; font-weight:500; src:url('../fonts/NotoSans-Medium.eot'); src:local('※'), url('../fonts/NotoSans-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans-Medium.woff') format('woff');}
-@font-face {font-family:"NotoSans"; font-weight:700; src:url('../fonts/NotoSans-Bold.eot'); src:local('※'), url('../fonts/NotoSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans-Bold.woff') format('woff');}
+@font-face {
+	font-family: "NotoSans";
+	font-weight: 100;
+	src: url('../fonts/NotoSans-Thin.eot');
+	src: local('※'), url('../fonts/NotoSans-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans-Thin.woff') format('woff');
+}
+
+@font-face {
+	font-family: "NotoSans";
+	font-weight: 300;
+	src: url('../fonts/NotoSans-Light.eot');
+	src: local('※'), url('../fonts/NotoSans-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: "NotoSans";
+	font-weight: 400;
+	src: url('../fonts/NotoSans-Regular.eot');
+	src: local('※'), url('../fonts/NotoSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: "NotoSans";
+	font-weight: 500;
+	src: url('../fonts/NotoSans-Medium.eot');
+	src: local('※'), url('../fonts/NotoSans-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: "NotoSans";
+	font-weight: 700;
+	src: url('../fonts/NotoSans-Bold.eot');
+	src: local('※'), url('../fonts/NotoSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans-Bold.woff') format('woff');
+}
 
 /*-------------------------------------------------------------------
 	@Resets

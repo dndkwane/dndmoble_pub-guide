@@ -2,7 +2,7 @@ var gRootURL = {
 	root : '/components/',
 }
 var gBaseURL = {
-	_wsg : gRootURL.root+'_wsg/',
+	_common : gRootURL.root+'_common/',
 	menu0 : gRootURL.root+'html/_prototype/',
 	menu1 : gRootURL.root+'html/generals/',
 	menu2 : gRootURL.root+'html/',
@@ -35,18 +35,18 @@ var include = {
 
 		document.write('<!-- Guide -->');
 		document.write('<link href="'+gRootURL.root+'css/style.css" rel="stylesheet" />');
-		document.write('<link href="'+gBaseURL._wsg+'css/import.css" rel="stylesheet" />');
+		document.write('<link href="'+gBaseURL._common+'css/import.css" rel="stylesheet" />');
 		document.write('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">');
-		document.write('<link href="'+gBaseURL._wsg+'codeview/styles/shCoreDefaultWhite.css" rel="stylesheet" />');
-		document.write('<script src="'+gBaseURL._wsg+'js/addon/jquery.mCustomScrollbar.min.js"></script>');
-		document.write('<script src="'+gBaseURL._wsg+'js/addon/jquery.clipboard.min.js"></script>');
-		document.write('<script src="'+gBaseURL._wsg+'js/wsg_guide.js"></script>');
-		//document.write('<script src="'+gBaseURL._wsg+'codeview/scripts/shCore.js?cb=undefined"></script>');
-		//document.write('<script src="'+gBaseURL._wsg+'codeview/scripts/shAutoLoader.js?cb=undefined"></script>');
-		//document.write('<script src="'+gBaseURL._wsg+'codeview/scripts/shBrushjScript.js?cb=undefined"></script>');
-		//document.write('<script src="'+gBaseURL._wsg+'codeview/scripts/shBrushXml.js?cb=undefined"></script>');
-		//document.write('<script src="'+gBaseURL._wsg+'codeview/scripts/shBrushCss.js?cb=undefined"></script>');
-		document.write('<script>SyntaxHighlighter.all();</script>');
+		//document.write('<link href="'+gBaseURL._common+'codeview/styles/shCoreDefaultWhite.css" rel="stylesheet" />');
+		document.write('<script src="'+gBaseURL._common+'js/addon/jquery.mCustomScrollbar.min.js"></script>');
+		document.write('<script src="'+gBaseURL._common+'js/addon/jquery.clipboard.min.js"></script>');
+		document.write('<script src="'+gBaseURL._common+'js/cp_guide.js"></script>');
+		//document.write('<script src="'+gBaseURL._common+'codeview/scripts/shCore.js?cb=undefined"></script>');
+		//document.write('<script src="'+gBaseURL._common+'codeview/scripts/shAutoLoader.js?cb=undefined"></script>');
+		//document.write('<script src="'+gBaseURL._common+'codeview/scripts/shBrushjScript.js?cb=undefined"></script>');
+		//document.write('<script src="'+gBaseURL._common+'codeview/scripts/shBrushXml.js?cb=undefined"></script>');
+		//document.write('<script src="'+gBaseURL._common+'codeview/scripts/shBrushCss.js?cb=undefined"></script>');
+		//document.write('<script>SyntaxHighlighter.all();</script>');
 	},
 	header : function(){
 		document.write('	<header id="g-header">');
@@ -57,7 +57,7 @@ var include = {
 		document.write('				<ul>');
 		//document.write('					<li><a href="'+gBaseURL.menu0+'_prototype_markup.html" data-aside="g-snbMenu0" data-url="'+gBaseURL.menu0+'">Prototype</a></li>');
 		//document.write('					<li><a href="'+gBaseURL.menu1+'index.html" data-aside="g-snbMenu1" data-url="'+gBaseURL.menu1+'">Genarals</a></li>');
-		document.write('					<li><a href="'+gBaseURL.menu2+'index.html" data-aside="g-snbMenu2" data-url="'+gBaseURL.menu2+'">Components</a></li>');
+		document.write('					<li><a href="'+gBaseURL.menu2+'components_color.html" data-aside="g-snbMenu2" data-url="'+gBaseURL.menu2+'">Components</a></li>');
 		// document.write('					<li><a href="'+gBaseURL.menu3+'index.html" data-aside="g-snbMenu3" data-url="'+gBaseURL.menu3+'">Patterns</a></li>');
 		// document.write('					<li><a href="'+gBaseURL.menu4+'index.html" data-aside="g-snbMenu4" data-url="'+gBaseURL.menu4+'">Vanilla</a></li>');
 		//document.write('					<li><a href="'+gBaseURL.menu5+'index.html" data-aside="g-snbMenu5" data-url="'+gBaseURL.menu5+'">Motions</a></li>');
@@ -135,12 +135,6 @@ var include = {
 			document.write('						<ul class="g-depth2">');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_color.html">Colors</a></li>');
 			document.write('						</ul>');
-			document.write('						<a href="javascript:;">Forms</a>');
-			document.write('						<ul class="g-depth2">');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_form.html">Form Elements</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_formGroup.html">Form Group</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_formMixin.html">Form Patterns</a></li>');
-			document.write('						</ul>');
 			document.write('						<a href="javascript:;">Elements</a>');
 			document.write('						<ul class="g-depth2">');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_button.html">Buttons</a></li>');
@@ -150,6 +144,12 @@ var include = {
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_bullet.html">Bullets</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_divider.html">Dividers</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_images.html">Images</a></li>');
+			document.write('						</ul>');
+			document.write('						<a href="javascript:;">Forms</a>');
+			document.write('						<ul class="g-depth2">');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_form.html">Form Elements</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_formGroup.html">Form Group</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_formMixin.html">Form Patterns</a></li>');
 			document.write('						</ul>');
 			document.write('						<a href="javascript:;">Collections</a>');
 			document.write('						<ul class="g-depth2">');

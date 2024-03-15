@@ -1,27 +1,10 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8" />
-<script src="../_wsg/js/wsg_include.js"></script>
-<script>include.meta()</script>
-<script>include.head()</script>
-<script type="text/javascript">
-	function fileAttach(obj){
-		var $this = $(obj).closest('.form-file');
-		$this.find('[type=file]').trigger('click');
-		$this.find('[type=file]').not('.is-evented').on('change', function(){
-			var value = $(this).val();
-			$this.find('[type=text]').val(value);
-		}).addClass('is-evented');
-	}
-
-jQuery(document).keydown(function(e){
-	if(e.keyCode === 37 || e.keyCode === 38 || e.keyCode === 39 || e.keyCode === 40) {
-		e.preventDefault();
-	}
-});
-//-->
-</script>
+	<meta charset="UTF-8" />
+	<script src="../_common/js/cp_include.js"></script>
+	<script>include.meta()</script>
+	<script>include.head()</script>
 </head>
 <body>
 <div id="g-wrapper">
@@ -42,9 +25,21 @@ jQuery(document).keydown(function(e){
 						<h2 class="g-h2">Primary color</h2>
 					</div>
           <div class="g-section-body">
-            <div>
-              <h1>Main_Blue 01</h1>
-              <span class="primary-color">test</span>
+            <div class="cp-color">
+              <ul>
+								<li>
+									<h1>Main_Blue 01</h1>
+                  <span class="primary-color"></span>
+								</li>
+								<li>
+									<h1>Main_Sky_Blue 02</h1>
+                  <span class="skyblue-color"></span>
+								</li>
+								<li>
+									<h1>Sub_Red 01</h1>
+                  <span class="sub-red-color"></span>
+								</li>
+							</ul>
             </div>
           </div>
 					<div class="g-section-body">

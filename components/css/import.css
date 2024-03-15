@@ -1,6 +1,4 @@
-﻿/* @import"http://fonts.googleapis.com/earlyaccess/notosanskr.css"; */
-/* @import"https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css"; */
-@import'animate.css';
+﻿@import'animate.css';
 @import'plugins.css';
 
 @keyframes dropdown {
@@ -150,7 +148,7 @@ section {
 
 html {
   scroll-behavior: smooth;
-  font-size: 1px
+  font-size: 10px
 }
 
 body {
@@ -160,9 +158,9 @@ body {
 body {
   font-family: "Noto Sans KR", "sans-serif", "Apple SD Gothic Neo", "AppleGothic", "Apple Gothic", "-apple-system", sans-serif;
   color: #000;
-  font-size: 14rem;
+  font-size: 10px;
   line-height: 1;
-  letter-spacing: -0.2rem;
+  letter-spacing: -0.1rem;
   word-break: break-all;
   word-wrap: break-word;
   box-sizing: border-box;
@@ -1849,12 +1847,12 @@ button::-moz-focus-inner {
 }
 
 .button.style-1 {
-  padding: 8px 16px;
+  padding: 1.4rem 1.6rem;
   background-color: #eee;
   border: 1px solid #eee;
   color: #222;
   font-size: 14px;
-  line-height: 22px;
+  
   transition: all .3s
 }
 
@@ -1868,155 +1866,76 @@ button::-moz-focus-inner {
 .button.style-1:disabled {
   opacity: .5
 }
-
-.button.style-1.primary {
-  background: #ff5400;
-  border-color: #ff5400;
-  color: #fff
-}
-
-.button.style-1.primary:hover,
-.button.style-1.primary:focus {
-  background: #ea1b00;
-  border-color: #ea1b00
-}
-
 .button.style-2 {
-  padding: 8px 16px;
+  padding: 1.4rem 1.6rem;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #bbb;
   color: #222;
   font-size: 14px;
-  line-height: 22px;
+  
   transition: all .3s
 }
-
-.button.style-2:hover,
-.button.style-2:focus {
-  border-color: #222;
-  color: #000
-}
-
-.button.style-2:disabled {
-  opacity: .5
-}
-
-.button.style-2.primary {
-  border-color: #ff5400;
-  color: #ff5400
-}
-
-.button.style-2.primary:hover,
-.button.style-2.primary:focus {
-  border-color: #ea1b00
-}
-
 .button.style-3 {
-  padding: 8px 16px;
+  padding: 1.4rem 1.6rem;
   background-color: #eee;
   border: 1px solid #eee;
   color: #222;
   font-size: 14px;
-  line-height: 22px;
+  
   transition: all .3s;
-  border-radius: 4px
+  border-radius: .8rem
 }
-
 .button.style-3:hover,
 .button.style-3:focus {
-  background-color: #ddd;
+  background-color: #bbb;
   border-color: #eee;
   color: #000
 }
-
 .button.style-3:disabled {
   opacity: .5
 }
-
-.button.style-3.primary {
-  background: #ff5400;
-  border-color: #ff5400;
-  color: #fff
-}
-
-.button.style-3.primary:hover,
-.button.style-3.primary:focus {
-  background: #ea1b00;
-  border-color: #ea1b00
-}
-
 .button.style-4 {
-  padding: 8px 16px;
+  padding: 1.4rem 1.6rem;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #bbb;
   color: #222;
   font-size: 14px;
-  line-height: 22px;
   transition: all .3s;
-  border-radius: 4px
+  border-radius: .8rem
 }
-
-.button.style-4:hover,
-.button.style-4:focus {
+button.style-4:hover,
+button.style-4:focus {
   border-color: #222;
-  color: #000
 }
-
 .button.style-4:disabled {
   opacity: .5
 }
-
-.button.style-4.primary {
-  border-color: #ff5400;
-  color: #ff5400
-}
-
-.button.style-4.primary:hover,
-.button.style-4.primary:focus {
-  border-color: #ea1b00
-}
-
 .button.style-5 {
-  padding: 8px 16px;
+  padding: 1.4rem 1.6rem;
   background-color: #eee;
   border: 1px solid #eee;
   color: #222;
   font-size: 14px;
-  line-height: 22px;
   transition: all .3s;
   border-radius: 30px
 }
 
 .button.style-5:hover,
 .button.style-5:focus {
-  background-color: #ddd;
+  background-color: #bbb;
   border-color: #eee;
   color: #000
 }
-
 .button.style-5:disabled {
   opacity: .5
 }
-
-.button.style-5.primary {
-  background: #ff5400;
-  border-color: #ff5400;
-  color: #fff
-}
-
-.button.style-5.primary:hover,
-.button.style-5.primary:focus {
-  background: #ea1b00;
-  border-color: #ea1b00
-}
-
 .button.style-6 {
-  padding: 8px 16px;
+  padding: 1.4rem 1.6rem;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #bbb;
   color: #222;
   font-size: 14px;
-  line-height: 22px;
+  
   transition: all .3s;
   border-radius: 30px
 }
@@ -2031,15 +1950,7 @@ button::-moz-focus-inner {
   opacity: .5
 }
 
-.button.style-6.primary {
-  border-color: #ff5400;
-  color: #ff5400
-}
 
-.button.style-6.primary:hover,
-.button.style-6.primary:focus {
-  border-color: #ea1b00
-}
 
 .button.text.text {
   font-size: 14px;
@@ -2334,7 +2245,7 @@ select::-ms-expand {
   height: 45px;
   padding: 0 15px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: .8rem;
   box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, .3);
   font-size: 14px;
   line-height: 22px;
@@ -2365,7 +2276,7 @@ select::-ms-expand {
   height: 45px;
   padding: 0 15px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: .8rem;
   box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, .3);
   font-size: 14px;
   line-height: 22px;
@@ -2395,7 +2306,7 @@ textarea.form-input {
   height: 45px;
   padding: 0 15px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: .8rem;
   box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, .3);
   font-size: 14px;
   line-height: 22px;
@@ -2428,7 +2339,7 @@ textarea.form-input:disabled:hover {
   height: 45px;
   padding: 0 15px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: .8rem;
   box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, .3);
   font-size: 14px;
   line-height: 22px;
@@ -3746,7 +3657,7 @@ img.img-cover {
   background: #444;
   border: 1px solid rgba(0, 0, 0, 0);
   color: #fff;
-  border-radius: 4px
+  border-radius: .8rem
 }
 
 .label.style-3.primary {
@@ -3759,7 +3670,7 @@ img.img-cover {
   background: #fff;
   border: 1px solid #444;
   color: #444;
-  border-radius: 4px
+  border-radius: .8rem
 }
 
 .label.style-4.primary {
