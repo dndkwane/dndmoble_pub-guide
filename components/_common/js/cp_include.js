@@ -26,9 +26,6 @@ var include = {
 		document.write('<link href="'+gRootURL.root+'css/style.css" rel="stylesheet" />');
 		document.write('<link href="'+gRootURL.root+'css/import.css" rel="stylesheet" />');
 		document.write('<script src="'+gRootURL.root+'js/libs/jquery-3.3.1.min.js"></script>');
-		//document.write('<script src="'+gRootURL.root+'js/addon/greensock/easing/EasePack.min.js"></script>');
-		//document.write('<script src="'+gRootURL.root+'js/addon/greensock/TweenMax.min.js"></script>');
-		//document.write('<script src="'+gRootURL.root+'js/addon/greensock/TweenLite.min.js"></script>');
 		document.write('<script src="'+gRootURL.root+'js/pub/pub_utility.js"></script>');
 		document.write('<script src="'+gRootURL.root+'js/pub/pub_device.js"></script>');
 		document.write('<script src="'+gRootURL.root+'js/pub/pub_ui.js"></script>');
@@ -36,17 +33,9 @@ var include = {
 		document.write('<!-- Guide -->');
 		document.write('<link href="'+gRootURL.root+'css/style.css" rel="stylesheet" />');
 		document.write('<link href="'+gBaseURL._common+'css/import.css" rel="stylesheet" />');
-		document.write('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">');
-		//document.write('<link href="'+gBaseURL._common+'codeview/styles/shCoreDefaultWhite.css" rel="stylesheet" />');
 		document.write('<script src="'+gBaseURL._common+'js/addon/jquery.mCustomScrollbar.min.js"></script>');
 		document.write('<script src="'+gBaseURL._common+'js/addon/jquery.clipboard.min.js"></script>');
 		document.write('<script src="'+gBaseURL._common+'js/cp_guide.js"></script>');
-		//document.write('<script src="'+gBaseURL._common+'codeview/scripts/shCore.js?cb=undefined"></script>');
-		//document.write('<script src="'+gBaseURL._common+'codeview/scripts/shAutoLoader.js?cb=undefined"></script>');
-		//document.write('<script src="'+gBaseURL._common+'codeview/scripts/shBrushjScript.js?cb=undefined"></script>');
-		//document.write('<script src="'+gBaseURL._common+'codeview/scripts/shBrushXml.js?cb=undefined"></script>');
-		//document.write('<script src="'+gBaseURL._common+'codeview/scripts/shBrushCss.js?cb=undefined"></script>');
-		//document.write('<script>SyntaxHighlighter.all();</script>');
 	},
 	header : function(){
 		document.write('	<header id="g-header">');
@@ -138,18 +127,18 @@ var include = {
 			document.write('						<a href="javascript:;">Elements</a>');
 			document.write('						<ul class="g-depth2">');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_button.html">Buttons</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_icon.html">Icons</a></li>');
+			//document.write('							<li class="g-node2"><a href="'+baseURL+'components_icon.html">Icons</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_label.html">Labels</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_badge.html">Badges</a></li>');
+			//document.write('							<li class="g-node2"><a href="'+baseURL+'components_badge.html">Badges</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_bullet.html">Bullets</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_divider.html">Dividers</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_images.html">Images</a></li>');
+			//document.write('							<li class="g-node2"><a href="'+baseURL+'components_images.html">Images</a></li>');
 			document.write('						</ul>');
 			document.write('						<a href="javascript:;">Forms</a>');
 			document.write('						<ul class="g-depth2">');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_form.html">Form Elements</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_formGroup.html">Form Group</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_formMixin.html">Form Patterns</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_formType.html">Form Types</a></li>');
 			document.write('						</ul>');
 			document.write('						<a href="javascript:;">Collections</a>');
 			document.write('						<ul class="g-depth2">');

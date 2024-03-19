@@ -1,4 +1,3 @@
-
 // flex
 @mixin flex($direction: row, $justify-content: space-between, $align-items: center) {
   display: flex;
@@ -14,14 +13,21 @@
 }
 
 // bg이미지
-@mixin image-style($ul,$size,$repeat,$positionX:50%, $positionY:50%){  // 
+@mixin image-style($ul,$size,$repeat,$positionX:50%, $positionY:50%){   
   background: {
     image:url($ul);
     size:$size;
     repeat:$repeat;
     position: $positionX, $positionY;
   }
+}
 
+// @content
+@mixin icon($url) {
+  &::after {
+    content: $url;
+    @content;
+  }
 }
 
 // h1, h2, h3
