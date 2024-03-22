@@ -4,27 +4,39 @@
 var ui = {
 	init: function(){
 		console.log('ui.init()');
-
-		if ($('.btn').length)				{this.waveEffect.init();}		// #Btn Effect
+		//if ($('.btn').length)				{this.waveEffect.init();}		// #Btn Effect
 		if ($('.gnb-dropdown').length)		{this.gnb_dropdown.init();}		// #Gnb Dropdown
 		if ($('.gnb-fulldown').length)		{this.gnb_fulldown.init();}		// #Gnb Fulldown
-		if ($('.tab-nav').length)			{this.tab.init();}				// #Tab
-		if ($('.acco').length)				{this.acco.init();}				// #acco
+		if ($('.tab-nav').length)					{this.tab.init();}				// #Tab
+		if ($('.acco').length)						{this.acco.init();}				// #acco
 		if ($('[data-role=fold]').length)	{this.foldToggle.init();}		// #Folder (접기)
 		if ($('[data-role=more]').length)	{this.moreToggle.init();}		// #FolderMore (더보기)
-		if ($('.tooltip').length)			{this.tooltip.init();}			// #Tooltip
-		if ($('.drop').length)				{this.drop.init();}				// #Dropdown
-		if ($('.drop-select').length)		{this.dropSelect.init();}		// #Dropdown
+		if ($('.tooltip').length)					{this.tooltip.init();}			// #Tooltip
+		if ($('.drop').length)						{this.drop.init();}				// #Dropdown
+		if ($('.drop-select').length)			{this.dropSelect.init();}		// #Dropdown
 		//HTML Property Events : onclick="ui.popup.open('id', this)"		// #Popup
-		if ($('.js-sticky').length)			{this.sticky.init();}			// Sticky
+		if ($('.js-sticky').length)				{this.sticky.init();}			// Sticky
 		if ($('.js-spyScroll').length)		{this.spyScroll.init();}		// Spy Scroll
 		if ($('.js-infinitScroll').length)	{this.infiniteScroll.init();}	// Infinit Scroll
 		if ($('.js-floating').length)		{this.floating.init();}			// Floating
 		if ($('.js-dimmer').length)			{this.dimmer.init();}			// Dimmer
 		if ($('.js-progress').length)		{this.progress.init();}			// Progress
 		if ($('.js-waypoint').length)		{this.waypoint.init();}			// Waypoint
-	},
+		if ($('.type-clear').length) 		{this.inputRemove.init();} // Input Clear
+	},	 
 
+	// input text 삭제
+	inputRemove: {
+		inputTextDel: function(){
+			var $inputDelGroup = $(this).closest('.type-clear').find('input');
+			$inputDelGroup.val('');
+		},
+		init: function() {
+			$('.type-clear button').click(this.inputTextDel);
+			$('.icon-del').click(this.inputTextDel);
+		}
+	},
+	
 	waveEffect : {
 		init : function(){
 			this.event();
@@ -105,7 +117,7 @@ var ui = {
 	// 파일첨부 - 삭제
 	fileAttachDe: function(obj){
 		$(obj).closest('.file').remove();
-	},
+	},	
 
 	//#Gnb Dropdown
 	gnb_dropdown : {
@@ -669,6 +681,7 @@ var ui = {
 			console.log('Waypoint Action');
 		},
 	},
+	
 }
 
 /*--------------------------------------------------------------

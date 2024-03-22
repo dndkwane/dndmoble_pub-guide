@@ -75,6 +75,8 @@ var gCom = {
 					activeEl.parent().addClass('is-current');
 					snbMenu = activeEl.attr('data-aside');
 					$('.'+snbMenu).show().siblings().not(':visible').remove();
+
+					
 				}
 				else if ($('.g-lnb a').length - 1 == i){
 					if (activeEl == null){
@@ -105,6 +107,8 @@ var gCom = {
 		anbBtnEl : '.g-btn-aside',
 		maskEl : '.g-mask',
 		asideWid : null,
+
+		
 		init : function(){
 			if (location.hash != ''){
 				gUI.spyScroll.action(location.hash);

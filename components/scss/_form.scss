@@ -1,4 +1,3 @@
-
 .form-button {
   height: 45px;
   padding: 0 15px;
@@ -45,7 +44,7 @@
   
   &:focus {
     border-color: $main-blue;
-    color: $main-blue
+    //color: $main-blue;
   }
   
   &:disabled {
@@ -101,7 +100,7 @@ textarea.form-input {
   line-height: 22px;
   transition: all .3s;
   padding-right: 45px;
-  @include image-style("../_common/img/caret_down.png", 1.6rem auto, no-repeat, calc(100% - 1.5rem), center );
+  @include image-style("../_common/img/icon/caret_down.svg", 1.6rem auto, no-repeat, calc(100% - 1.5rem), center );
 
   &:hover {
     border-color: #222
@@ -177,16 +176,16 @@ textarea.form-input {
       background-color: inherit;
     }
     &>input:checked+label:before {
-      @include image-style("../_common/img/ico_radio_on.png", 100% auto, no-repeat, center, center );
+      @include image-style("../_common/img/icon/ico_radio_on.svg", 100% auto, no-repeat, center, center );
       border: none;
     }
     &>input[disabled]+label:before {
-      @include image-style("../_common/img/ico_radio_dis.png", 100% auto, no-repeat, center, center );
+      @include image-style("../_common/img/icon/ico_radio_disable.svg", 100% auto, no-repeat, center, center );
       border: none;
-      background-color: none;
     }
     & label:before {
-      @include image-style("../_common/img/ico_radio_off.png", 100% auto, no-repeat, center, center );
+      @include image-style("../_common/img/icon/ico_radio_off.svg", 100% auto, no-repeat, center, center );
+      border: none;
     }
     &>input:hover+label:before,
     &>input:focus+label:before {
@@ -195,13 +194,13 @@ textarea.form-input {
   }
 
   & label {
-    display: inline-block;
+    @include flex($direction: row, $justify-content: center, $align-items: center);
+
     position: relative;
     min-width: 20px;
     min-height: 20px;
-    font-size: 13px;
     line-height: 18px;
-    vertical-align: middle
+    vertical-align: middle;
   }
   
   & label span {
@@ -214,7 +213,7 @@ textarea.form-input {
     content: "";
     position: absolute;
     left: 0;
-    top: 0
+    top: 0;
   }
   
   & label:before {
@@ -223,7 +222,7 @@ textarea.form-input {
     height: 20px;
     border: 1px solid #ddd;
     background: #fff;
-    border-radius: 50%
+    border-radius: 50%;
   }
   
   &>input {
@@ -244,8 +243,8 @@ textarea.form-input {
   }
   
   &>input:checked+label:after {
-    top: 5px;
-    left: 5px;
+    top: .6rem;
+    left: .6rem;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -274,7 +273,7 @@ textarea.form-input {
   
   &>input[disabled]:focus+label:before,
   &>input[disabled]:hover+label:before {
-    border-color: #ddd
+    border-color: #ddd;
   }
   
   &>input[disabled]:checked+label:after {
@@ -320,7 +319,6 @@ textarea.form-input {
   position: relative;
   min-width: 20px;
   min-height: 20px;
-  font-size: 13px;
   line-height: 20px;
   vertical-align: middle
 }
@@ -778,12 +776,27 @@ span.form-text {
   right: 5px;
   height: 30px;
   width: 30px;
-  line-height: 30px
+  line-height: 30px;
+  background-color: transparent;
 }
 
 .form-input-group.type-clear .form-input {
   padding-right: 40px
 }
+
+.type-clear .form-input[type="text"]::-webkit-search-cancel-button {
+  border: 0;
+  display: block;
+  right:45px; bottom:13px;
+  position: absolute;
+  width: 2.4rem;
+  height: 2.4rem;
+  @include image-style("../_common/img/icon/ico_del.svg", 2rem auto, no-repeat);
+  z-index:1;  
+  cursor: pointer;
+  transition: 0.2s;
+}
+
 
 .form-input-group.type-search {
   width: 100%
@@ -797,7 +810,8 @@ span.form-text {
   right: 5px;
   height: 30px;
   width: 30px;
-  line-height: 30px
+  line-height: 30px;
+  background-color: transparent;
 }
 
 .form-input-group.type-search .form-input {

@@ -31,7 +31,7 @@ var include = {
 		document.write('<script src="'+gRootURL.root+'js/pub/pub_ui.js"></script>');
 
 		document.write('<!-- Guide -->');
-		document.write('<link href="'+gRootURL.root+'css/style.css" rel="stylesheet" />');
+		//document.write('<link href="'+gRootURL.root+'css/style.css" rel="stylesheet" />');
 		document.write('<link href="'+gBaseURL._common+'css/import.css" rel="stylesheet" />');
 		document.write('<script src="'+gBaseURL._common+'js/addon/jquery.mCustomScrollbar.min.js"></script>');
 		document.write('<script src="'+gBaseURL._common+'js/addon/jquery.clipboard.min.js"></script>');
@@ -137,21 +137,21 @@ var include = {
 			document.write('						<a href="javascript:;">Forms</a>');
 			document.write('						<ul class="g-depth2">');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_form.html">Form Elements</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_formGroup.html">Form Group</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_formType.html">Form Types</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_form_group.html">Form Group</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_form_type.html">Form Types</a></li>');
 			document.write('						</ul>');
 			document.write('						<a href="javascript:;">Collections</a>');
 			document.write('						<ul class="g-depth2">');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_breadcrumb.html">Breadcrumbs</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_list.html">Lists</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_item.html">Items</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_card.html">Cards</a></li>');
+			//document.write('							<li class="g-node2"><a href="'+baseURL+'components_item.html">Items</a></li>');
+			//document.write('							<li class="g-node2"><a href="'+baseURL+'components_card.html">Cards</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_nav.html">Nav</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_step.html">Steps</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_table.html">Tables</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_pagination.html">Paginations</a></li>');
 			document.write('						</ul>');
-			document.write('						<a href="javascript:;">Patters</a>');
+			/* document.write('						<a href="javascript:;">Patters</a>');
 			document.write('						<ul class="g-depth2">');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_board_list.html">Board List</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_board_view.html">Board View</a></li>');
@@ -159,7 +159,7 @@ var include = {
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_chat.html">Chat</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_feed.html">Feed</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_statistic.html">Staticstic</a></li>');
-			document.write('						</ul>');
+			document.write('						</ul>'); */
 			document.write('						<a href="javascript:;">Modules</a>');
 			document.write('						<ul class="g-depth2">');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_accordion.html">Accordion</a></li>');
@@ -173,10 +173,10 @@ var include = {
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_customscroll.html">Custom Scroll</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_sidebar.html">Sidebar</a></li>');
 			document.write('						</ul>');
-			document.write('						<a href="javascript:;">Behaviors</a>');
+			/* document.write('						<a href="javascript:;">Behaviors</a>');
 			document.write('						<ul class="g-depth2">');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_youtube.html">Youtube</a></li>');
-			document.write('						</ul>');
+			document.write('						</ul>'); */
 			document.write('					</li>');
 			document.write('				</ul>');
 			document.write('				<!-- //Convention -->');

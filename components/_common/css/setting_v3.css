@@ -12,8 +12,7 @@
 .g-logo {padding-left:40px;}
 .g-logo a {line-height:60px;}
 .g-lnb {padding:15px 20px;}
-.g-lnb > ul > li > a {line-height:30px; border-radius:20px; font-size:16px; padding:0 15px;  font-family:'NSL'}
-.g-lnb > ul > li.is-current > a {font-family:'NSR'}
+.g-lnb > ul > li > a {line-height:30px; border-radius:20px; font-size:16px; padding:0 15px;  }
 .g-snb .g-depth1,
 .g-snb .g-depth1 .g-node1 {padding:25px 0;}
 
@@ -39,9 +38,6 @@
 .g-content-header, .g-content-body {padding:20px 15px;}
 }
 .g-snb .g-depth2 {margin-bottom: 20px;}
-.g-snb .g-depth2 .g-node2.is-current > a,
-.g-snb .g-depth2 .g-node2 > a:focus,
-.g-snb .g-depth2 .g-node2 > a:hover {font-family:'NSR';}
 
 /* UI */
 .g-h1 {font-weight: 700;}
@@ -71,7 +67,7 @@
 .g-btn-aside {left:20px;}
 }
 @media only screen and (max-width: 720px) {
-.g-lnb {height: 100%;}
+/* .g-lnb {height: 100%;} */
 .g-lnb > .g-node-title {display:inline-block; height: 100%; margin-right:0; font-size: 16px; padding:0 30px; line-height:30px; border-radius:20px;}
 .g-lnb > ul {display:none; padding:5px 0;}
 .g-lnb > ul > li > a {padding:0 30px;}

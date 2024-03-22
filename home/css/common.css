@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+/* 
 @font-face {
   font-family: "NotoSans";
   font-weight: 100;
@@ -34,7 +34,7 @@
   src: url('../fonts/NotoSans-Bold.eot');
   src: local('â€»'), url('../fonts/NotoSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans-Bold.woff') format('woff');
 }
-
+ */
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -67,7 +67,7 @@ b {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   -o-box-sizing: inherit;
-  -webkit-print-color-adjust: exact;
+  /* -webkit-print-color-adjust: exact; */
 }
 
 :before,
