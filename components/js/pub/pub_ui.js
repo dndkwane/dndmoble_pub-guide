@@ -23,7 +23,7 @@ var ui = {
 		if ($('.js-progress').length)		{this.progress.init();}			// Progress
 		if ($('.js-waypoint').length)		{this.waypoint.init();}			// Waypoint
 		if ($('.type-clear').length) 		{this.inputRemove.init();} // Input Clear
-	},	 
+	},
 
 	// input text 삭제
 	inputRemove: {
@@ -231,7 +231,7 @@ var ui = {
 		},
 		reset: function(){
 			var _this = this;
-			$('.acco-basic').each(function(){$(this).attr({'data-sync':'true', 'data-toggle':'true' })});
+			$('.acco.__basic').each(function(){$(this).attr({'data-sync':'true', 'data-toggle':'true' })});
 		},
 		event: function($this){
 			var _this = this;
@@ -288,6 +288,7 @@ var ui = {
 	*/
 	foldToggle : {
 		eleButton: '.fold-toggle[data-role=fold]',
+		eleButtonAll: '.fold-toggle',
 		eleContent: '.fold-cont',
 		eleFocus: '.fold-focus',
 		speed: 250,
@@ -306,6 +307,10 @@ var ui = {
 			$(this.eleButton).not('.is-clicked').on('click', function(){
 				_this.action($(this).attr('aria-controls'));
 			}).addClass('is-clicked');
+
+			$(this.eleButtonAll).on('click', function(){
+        $(this).toggleClass('rotate');
+   	  });
 		},
 		action : function(id){
 			var _this = this;
@@ -389,6 +394,11 @@ var ui = {
 			$(id).attr({'data-state':'null', 'aria-hidden':'true'});
 			$(id).stop().fadeOut(200, function(){$(this).attr({'data-state':'closed'}).attr('hidden'); });
 			$(_this.eleOpener+'[href="'+id+'"]').attr({'aria-expanded':'false'});
+
+			$('.tooltip-close').on('click', function() {
+        var tooltipId = $(this).attr('aria-controls');
+        $('#' + tooltipId).hide();
+    });
 		},
 	},
 
@@ -487,7 +497,13 @@ var ui = {
 		eleOpener: '.popup-open',
 		eleCloser: '.popup-close',
 		eleFocus : '.popup-focus',
+		eleColserM: '.dimmer',    
 		zindex   : 1000,
+
+		init:function() {
+			this.event();
+		},
+
 		open: function(id, obj){
 			var _this = this;
 			var $id = $('#'+id);
@@ -495,11 +511,12 @@ var ui = {
 			$id.removeAttr('hidden');
 			setTimeout(function(){ $id.addClass('is-active') }, 0);
 			$id.one(transitionend, function(){
-				if ($(this).hasClass('is-active')){
+				if ($(this).hasClass('is-active')){ 
 					$(this).find(_this.eleFocus).attr('tabindex','0').focus();
 				}
 			});
 			dimmer.open($id, 'dimmer-popup');
+			
 			return 'Popup Opened';
 		},
 		close: function(id, callback){
@@ -515,8 +532,16 @@ var ui = {
 				}
 			});
 			dimmer.close($id, 'dimmer-popup');
+			
 			return 'Popup Closed';
 		},
+		event: function(){
+			$('.dimmer').on('click', function() {
+        var popupId = $(this).closest('.popup-wrap').attr('id');
+        ui.popup.close(popupId);
+				$('.dimmer').removeClass('is-active');
+	    });
+		}	
 	},
 
 	/*
@@ -534,7 +559,7 @@ var ui = {
 		reset: function($this){
 			ut.setAnchorAttr($this);
 		},
-			event: function(){
+		event: function(){
 			this.action();
 		},
 		action: function(){

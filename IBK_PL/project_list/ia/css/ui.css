@@ -1,4 +1,3 @@
-
 /*-------------------------------------------------------------------
     Layout
 -------------------------------------------------------------------*/
@@ -40,11 +39,11 @@
     line-height: 1.8;
 }
 
-.ia-section+.ia-section {
+.ia-section + .ia-section {
     margin-top: 30px;
 }
 
-.ia-section-ajax+.ia-section-ajax {
+.ia-section-ajax + .ia-section-ajax {
     margin-top: 30px;
 }
 
@@ -87,7 +86,7 @@
     font-weight: bold;
 }
 
-.ia-h3+.ia-h4 {
+.ia-h3 + .ia-h4 {
     margin-top: 10px;
 }
 
@@ -104,7 +103,7 @@
 }
 
 @media screen and (max-width:639px) {
-    .ia-content-header>.ia-in-sec {
+    .ia-content-header > .ia-in-sec {
         padding-top: 10px;
         padding-bottom: 10px;
     }
@@ -265,7 +264,7 @@
     border-left: 0;
 }
 
-.ia-tbl table tbody+tbody tr:first-child td {
+.ia-tbl table tbody + tbody tr:first-child td {
     border-top: 1px solid #ccc;
 }
 

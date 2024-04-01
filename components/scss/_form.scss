@@ -4,7 +4,7 @@
   border: 1px solid #ddd;
   border-radius: .8rem;
   box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, .3);
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 22px;
   transition: all .3s;
   flex: none;
@@ -34,7 +34,7 @@
   border: 1px solid #ddd;
   border-radius: .8rem;
   box-shadow: 1px 1px 2px 0px rgba(200, 200, 200, .3);
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 22px;
   transition: all .3s;
   
@@ -100,6 +100,7 @@ textarea.form-input {
   line-height: 22px;
   transition: all .3s;
   padding-right: 45px;
+  font-size: 1.4rem;
   @include image-style("../_common/img/icon/caret_down.svg", 1.6rem auto, no-repeat, calc(100% - 1.5rem), center );
 
   &:hover {
@@ -205,7 +206,8 @@ textarea.form-input {
   
   & label span {
     display: inline-block;
-    padding-left: 28px
+    padding-left: 2.8rem;
+    font-size: 1.4rem;
   }
   
   & label:before,
@@ -243,8 +245,8 @@ textarea.form-input {
   }
   
   &>input:checked+label:after {
-    top: .6rem;
-    left: .6rem;
+    top: .5rem;
+    left: .5rem;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -311,119 +313,122 @@ textarea.form-input {
   position: relative;
   margin: 5px 0;
   line-height: 1;
-  vertical-align: middle
+  vertical-align: middle;
+
+  & label {
+    display: inline-block;
+    position: relative;
+    min-width: 20px;
+    min-height: 20px;
+    line-height: 20px;
+    vertical-align: middle
+  }
+  
+  & label span {
+    display: inline-block;
+    padding-left: 28px;
+    font-size: 1.4rem;
+  }
+  
+  & label:before,
+  & label:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0
+  }
+  
+  & label:before {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    background: #fff
+  }
+  
+  &>input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px
+  }
+  
+  &+& {
+    margin-left: 10px
+  }
+  
+  &>input:checked+label:before {
+    border-color: $main-blue
+  }
+  
+  &>input:checked+label:after {
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 7px;
+    background: none;
+    border-left: 2px solid $main-blue;
+    border-bottom: 2px solid $main-blue;
+    transform: rotate(-45deg)
+  }
+  
+  &>input.is-focused+label:before,
+  &>input:hover+label:before,
+  &>input:focus+label:before {
+    border-color: #888
+  }
+  
+  &>input:checked:focus+label:before,
+  &>input:checked:hover+label:before {
+    border-color: $main-blue;
+    transition: all .3s
+  }
+  
+  &>input[disabled]+label {
+    color: #999
+  }
+  
+  &>input[disabled]+label:before {
+    background-color: #f0f0f0
+  }
+  
+  &>input[disabled]:focus+label:before,
+  &>input[disabled]:hover+label:before {
+    border-color: #ddd
+  }
+  
+  &>input[disabled]:checked+label:after {
+    border-color: #888
+  }
+  
+  &>input[disabled]:checked+label:before,
+  &>input[disabled]:checked:focus+label:before,
+  &>input[disabled]:checked:hover+label:before {
+    border-color: #888
+  }
+  
+  &>input.is-errored+label {
+    color: #f52727
+  }
+  
+  &>input.is-errored+label:before,
+  &>input.is-errored.is-focused:checked+label:before,
+  &>input.is-errored:checked:hover+label:before,
+  &>input.is-errored:checked:focus+label:before {
+    border-color: #f52727
+  }
+  
+  &>input.is-errored:checked+label:before {
+    border-color: #f52727
+  }
+  
+  &>input.is-errored:checked+label:after {
+    border-color: #f52727
+  }
 }
 
-.form-checkbox label {
-  display: inline-block;
-  position: relative;
-  min-width: 20px;
-  min-height: 20px;
-  line-height: 20px;
-  vertical-align: middle
-}
 
-.form-checkbox label span {
-  display: inline-block;
-  padding-left: 28px
-}
-
-.form-checkbox label:before,
-.form-checkbox label:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0
-}
-
-.form-checkbox label:before {
-  top: 0;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #ddd;
-  background: #fff
-}
-
-.form-checkbox>input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 20px;
-  height: 20px
-}
-
-.form-checkbox+.form-checkbox {
-  margin-left: 10px
-}
-
-.form-checkbox>input:checked+label:before {
-  border-color: $main-blue
-}
-
-.form-checkbox>input:checked+label:after {
-  left: 5px;
-  top: 5px;
-  width: 10px;
-  height: 7px;
-  background: none;
-  border-left: 2px solid $main-blue;
-  border-bottom: 2px solid $main-blue;
-  transform: rotate(-45deg)
-}
-
-.form-checkbox>input.is-focused+label:before,
-.form-checkbox>input:hover+label:before,
-.form-checkbox>input:focus+label:before {
-  border-color: #888
-}
-
-.form-checkbox>input:checked:focus+label:before,
-.form-checkbox>input:checked:hover+label:before {
-  border-color: $main-blue;
-  transition: all .3s
-}
-
-.form-checkbox>input[disabled]+label {
-  color: #999
-}
-
-.form-checkbox>input[disabled]+label:before {
-  background-color: #f0f0f0
-}
-
-.form-checkbox>input[disabled]:focus+label:before,
-.form-checkbox>input[disabled]:hover+label:before {
-  border-color: #ddd
-}
-
-.form-checkbox>input[disabled]:checked+label:after {
-  border-color: #888
-}
-
-.form-checkbox>input[disabled]:checked+label:before,
-.form-checkbox>input[disabled]:checked:focus+label:before,
-.form-checkbox>input[disabled]:checked:hover+label:before {
-  border-color: #888
-}
-
-.form-checkbox>input.is-errored+label {
-  color: #f52727
-}
-
-.form-checkbox>input.is-errored+label:before,
-.form-checkbox>input.is-errored.is-focused:checked+label:before,
-.form-checkbox>input.is-errored:checked:hover+label:before,
-.form-checkbox>input.is-errored:checked:focus+label:before {
-  border-color: #f52727
-}
-
-.form-checkbox>input.is-errored:checked+label:before {
-  border-color: #f52727
-}
-
-.form-checkbox>input.is-errored:checked+label:after {
-  border-color: #f52727
-}
 
 .form-switch+.form-switch {
   margin-left: 10px
@@ -450,7 +455,7 @@ textarea.form-input {
     height: 30px;
     background-color: #EFF2F9;
     border-radius: 15px;
-    vertical-align: top
+    vertical-align: top;
   }
   
   & input,
@@ -469,30 +474,30 @@ textarea.form-input {
     color: #fff;
     font-size: 12px;
     transform: translateY(-50%);
-    transition: all .3s
+    transition: all .3s;
   }
   
   & input {
     z-index: 0;
     border: 0;
-    height: 24px
+    height: 24px;
   }
   
   & input:checked,
   & input:checked+label:after {
-    left: calc(100% - 42px)
+    left: calc(100% - 42px);
   }
   
   & input:checked+label:after {
-    background-color: #046FD9
+    background-color: #046FD9;
   }
   
   & input+label:after {
-    content: "OFF"
+    content: "OFF";
   }
   
   & input:checked+label:after {
-    content: "ON"
+    content: "ON";
   }
   
   & input[disabled]+label:before {
@@ -506,7 +511,8 @@ textarea.form-input {
   position: relative;
   padding: 11px 0 11px 0px;
   line-height: 22px;
-  vertical-align: middle
+  vertical-align: middle;
+  font-size: 1.4rem;
 }
 
 .form-label,
@@ -525,7 +531,7 @@ span.form-text {
   min-width: 24px;
   line-height: 45px;
   text-align: center;
-  
+  font-size: 1.4rem;
 }
 
 .form-alert {
@@ -604,6 +610,7 @@ span.form-text {
     margin-right: 0;
     > p {
       margin-left: .8rem;
+      font-size: 1.4rem;
     }
   };
   >.form-input {
@@ -674,7 +681,8 @@ span.form-text {
 }
 
 .form-controls .form-text {
-  margin: 0 8px
+  margin: 0 8px;
+  font-size: 1.4rem;
 }
 
 .form-controls .form-button {
@@ -757,7 +765,7 @@ span.form-text {
 
 .form-input-group {
   position: relative;
-  display: block
+  display: block;
 }
 
 .form-input-group .form-input {
@@ -796,7 +804,6 @@ span.form-text {
   cursor: pointer;
   transition: 0.2s;
 }
-
 
 .form-input-group.type-search {
   width: 100%

@@ -57,3 +57,22 @@
     -webkit-box-orient: vertical;
   }
 }
+
+// 미디어쿼리 분기문 믹스인
+// Break Point
+$tablet: 768px;
+$mobile: 540px;
+  
+// Tablet
+@mixin res--tablet {
+  @media screen and (min-width: #{$tablet}) {
+    @content;
+  }
+}
+ 
+// Mobile
+@mixin res--mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content;
+  }
+}
