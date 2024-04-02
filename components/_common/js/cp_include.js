@@ -15,7 +15,7 @@ var gBaseURL = {
 
 var include = {
 	meta : function(){
-		document.write('<title>IBK KIUP BANKING UI - Pub Guide</title>');
+		document.write('<title>dndmobile - 퍼블리싱 가이드</title>');
 		document.write('<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
 		document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />');
 		document.write('<link rel="shortcut icon" href="'+gRootURL.root+'favicon.ico" type="image/x-icon" />');
@@ -40,7 +40,7 @@ var include = {
 	header : function(){
 		document.write('	<header id="g-header">');
 		document.write('		<div class="g-header-inner">');
-		document.write('			<h1 class="g-logo"><a href="/">Pub Guide</a></h1>');
+		document.write('			<h1 class="g-logo"><a href="/">퍼블리싱 가이드</a></h1>');
 		document.write('			<button type="button" class="g-btn-aside"><span>Menu</span></button>');
 		document.write('			<nav class="g-lnb">');
 		document.write('				<ul>');
@@ -145,22 +145,12 @@ var include = {
 			document.write('						<ul class="g-depth2">');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_breadcrumb.html">Breadcrumbs</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_list.html">Lists</a></li>');
-			//document.write('							<li class="g-node2"><a href="'+baseURL+'components_item.html">Items</a></li>');
-			//document.write('							<li class="g-node2"><a href="'+baseURL+'components_card.html">Cards</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_grid.html">Grid</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_nav.html">Nav</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_step.html">Steps</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_table.html">Tables</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_pagination.html">Paginations</a></li>');
 			document.write('						</ul>');
-			/* document.write('						<a href="javascript:;">Patters</a>');
-			document.write('						<ul class="g-depth2">');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_board_list.html">Board List</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_board_view.html">Board View</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_comment.html">Comment</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_chat.html">Chat</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_feed.html">Feed</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_statistic.html">Staticstic</a></li>');
-			document.write('						</ul>'); */
 			document.write('						<a href="javascript:;">Modules</a>');
 			document.write('						<ul class="g-depth2">');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_accordion.html">Accordion</a></li>');
