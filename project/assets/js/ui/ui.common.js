@@ -23,11 +23,11 @@ var	$window			= null,
 _;
 
 //Devices
-var isIOS			= browser.os == 'ios',
+/* var isIOS			= browser.os == 'ios',
 	isANDROID		= browser.os == 'android',
 	isMOBILE		= browser.mobile == true,
 	isPC			= browser.mobile == false,
-_;
+_; */
 
 //Scrolls
 var scrTop			= null,		//스크롤 현재위치
@@ -56,7 +56,7 @@ function setElementInit(){
 }
 
 /* 디바이스 설정 */
-function setDeviceInit(){
+/* function setDeviceInit(){
 	var cls = 'dv_';
 	var browserDevice = function(){ return browser.mobile == true ? 'mobile' : 'pc' }
 	var clsBrowser = ''
@@ -66,7 +66,7 @@ function setDeviceInit(){
 		+ ' ' + cls + browser.os + Math.floor(browser.osVersion)
 		+ ' ' + cls + browserDevice();
 	$body.addClass(clsBrowser);
-}
+} */
 
 /* 상태 설정 */
 function setStatusInit(){
@@ -196,9 +196,19 @@ function asideClose(id, $btn){
 	$btn.attr('aria-expanded', 'true');
 	$aside.removeClass('is-active').attr('aria-hidden', 'true');
 }
+// 사이드바 최근이용메뉴 클릭 삭제
+function latestMenu() {
+	var self = this;
+	var latestMenuBtn = '.menus button i'
+	$(latestMenuBtn).on('click', function(e) {
+		e.preventDefault();
+		$(this).parents('.menus li').slideUp(150);
+	});
+
+}
 
 /*---------------------------------------------------------------
-	@Mudule
+	@Module
 ---------------------------------------------------------------*/
 /* 파일첨부 - 파일명표시 */
 function fileAttachSrc(obj, e){
@@ -260,103 +270,6 @@ function fileAttachPreview(id, e){
 			}
 			reader.readAsDataURL(f);
 		})
-	}
-}
-
-/* Datepicker */
-function datepickerInit(){
-	$('.js-datepicker').each(function(){
-		var id = $(this).attr('id');
-		$(this).attr("readonly", "readonly").prop('readonly', true);
-		datepickerUpdate(id);
-	});
-	datepickerEvent();
-}
-function datepickerEvent(){
-	$('#ui-datepicker-div').each(function(){
-		var $this = $(this);
-		$(window).off('pageResizeEnd.datepicker resize.datepicker').on('pageResizeEnd.datepicker resize.datepicker', function(e){
-			$this.hide();
-		});
-	})
-}
-var datepickersPara = null;
-function datepickerUpdate(id){
-	if (id != undefined && id != ''){
-		var $ele = $('#'+id);
-		var maxNum = 99999;
-		var minNum;
-		var yearRangeBefore = '10';
-		var yearRangeAfter = '10';
-		var holidays = {}
-		if ($ele.attr('data-today') == 'true'){ maxNum = 0 } //오늘까지
-		if (parseInt($ele.attr('data-max')) >= 0){ maxNum = parseInt($ele.attr('data-max')) } //오늘까지
-		if (parseInt($ele.attr('data-min')) >= 0){ minNum = parseInt($ele.attr('data-min')) } //오늘부터
-		if ($ele.is('[data-range-before]')){ yearRangeBefore = $ele.data('range-before') } //이전연도범위
-		if ($ele.is('[data-range-after]')){ yearRangeAfter = $ele.data('range-after') } //이후연도범위
-		var optionDate = {
-			prevText: '이전달',
-			nextText: '다음달',
-			// closeText: '닫기',
-			// currentText: '오늘',
-			closeText: false,
-			currentText: false,
-			monthNames: ['1','2','3','4','5','6','7','8','9','10','11','12'],
-			monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
-			dayNamesMin: ['일','월','화','수','목','금','토'],
-			dateFormat: 'yy-mm-dd',
-			ignoreReadonly: true,
-			yearSuffix: '',
-			showMonthAfterYear: true,
-			showButtonPanel: true,
-			showOn: 'both',
-			minDate: minNum,
-			maxDate: maxNum,
-			changeMonth: false,
-			changeYear: false,
-			yearRange:'c-'+yearRangeBefore+':c+'+yearRangeAfter, // 이전 이후로 얼마나 표시할지 결정
-			//buttonImageOnly: false,
-			buttonText: '달력',
-			beforeShowDay: function(day){
-				var result;
-				var holiday = holidays[$.datepicker.formatDate("mmdd", day)];
-				var thisYear = $.datepicker.formatDate("yy", day);
-				if (holiday){
-					if(thisYear == holiday.year || holiday.year == ""){
-						result = [true, "ui-date-holiday", holiday.title];
-					}
-				}
-				if (!result){
-					switch (day.getDay()){
-						case 0:
-							result = [true, "ui-date-sunday ui-date-holiday"];
-							break;
-						case 6:
-							result = [true, "ui-date-saturday"];
-							break;
-						default:
-							result = [true, ""];
-							break;
-					}
-				}
-				return result;
-			},
-			onSelect : function(selected) {
-				datepickersPara = {
-					selectDate: selected,
-					selectId: id
-				}
-				console.log('datepicker onSelect: ', selected);
-				$window.trigger('datepickerOnSelect');
-		 	},	
-		}
-		$ele.datepicker(optionDate); //기본달력
-		var disabled = function(){ $ele.next('.ui-datepicker-trigger').prop('disabled', true).addClass('is-disabled') }
-		var enabled = function(){ $ele.next('.ui-datepicker-trigger').prop('disabled', false).removeClass('is-disabled') }
-		$ele.prop('disabled') ? disabled() : enabled();
-		$ele.next('.ui-datepicker-trigger').html('<span><i class="blind">달력</i></span>');
-	} else {
-		console.log('아이디가 없습니다.');
 	}
 }
 
@@ -665,8 +578,81 @@ function swipeDemoInit(){
 			swiperDemo.autoplay.play();
 			$swiper.addClass('is-played').removeClass('is-pauseed');					
 		});
-	});
+	});	
 }
+
+/* FixMenu on/off */
+function fixMenuSelinit(){
+	var fixMenuSel = '#fixed-menu li a';
+	var fixMenu = {
+		init: function() {
+			$(fixMenuSel).on('click', function(e) {
+				e.preventDefault();
+				$(this).parent().addClass('on').siblings().removeClass('on');
+			});
+		}
+	};
+	fixMenu.init();
+}
+
+/* TopMenu on/off */
+function navBarinit(){
+	var navMenuSel = '.navbar li a';
+	var navMenu = {
+		init: function() {
+			$(navMenuSel).on('click', function(e) {
+				e.preventDefault();
+				$(this).parent().addClass('on').siblings().removeClass('on');
+			});
+		}
+	};
+	navMenu.init();
+}
+
+var gCom = {
+	init: function () {
+		this.gAside.init();
+	},
+	gAside: {
+		asideEl: '.side-menu',
+		anbBtnEl: '.right-menu .all-menu',
+		maskEl: '.g-mask',
+		asideWid: null,
+
+		init: function () {
+			this.asideWid = $(this.asideEl).width();
+			this.setInit();
+			this.event();
+		},
+		setInit: function () {
+			var _this = this;
+			var path = location.pathname;
+			$(this.asideEl).find('.g-snb a[href*="' + path + '"]').parent().addClass('is-current');
+		},
+		event: function () {
+			//펼치기
+			$('body').addClass('is-aside-closed');
+			$(this.anbBtnEl).not('.is-clickEvent').on('click', function (e) {
+				if (!$('body').hasClass('is-aside-closed')) {
+					$('body').removeClass('is-aside-opened');
+					$('body').addClass('is-aside-closed');
+					$(this).removeClass('active');
+				} else {
+					$('body').addClass('is-aside-opened');
+					$('body').removeClass('is-aside-closed');
+					$(this).addClass('active');
+				}
+			}).addClass('is-clickEvent');
+
+			//숨기기
+			$(this.maskEl).not('.is-clickEvent').on('click', function (e) {
+				$('body').removeClass('is-aside-opened').addClass('is-aside-closed');
+			}).addClass('is-clickEvent');
+		},
+	},
+}
+
+
 
 /*---------------------------------------------------------------
 	@Content
@@ -681,14 +667,14 @@ function nameInit(){
 /* Setting */
 function set_init(){
 	setElementInit(); // 엘리먼트 설정
-	setDeviceInit(); // 디바이스 설정
+	/* setDeviceInit(); // 디바이스 설정 */
 	setStatusInit(); // 상태 설정
 }
-
 /* UI */
 function ui_init(){
 	/* Layout */
 	asideInit(); // 사이드메뉴
+	latestMenu(); // 사이드메뉴 최근이용메뉴
 
 	/* Components */
 	datepickerInit(); // Datepicker
@@ -698,6 +684,8 @@ function ui_init(){
 	accoInit();	// Accodion
 	tooltipInit(); // Tooltip
 	popoverInit(); // Popover
+	fixMenuSelinit(); // Bottom menu
+	navBarinit(); // Top menu
 }
 
 /* Ready */
@@ -705,3 +693,7 @@ $(function(){
 	set_init();
 	ui_init();
 });
+
+$(document).ready(function () {
+	gCom.init();
+})

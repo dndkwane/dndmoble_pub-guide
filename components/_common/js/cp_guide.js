@@ -107,7 +107,6 @@ var gCom = {
 		maskEl: '.g-mask',
 		asideWid: null,
 
-
 		init: function () {
 			if (location.hash != '') {
 				gUI.spyScroll.action(location.hash);
@@ -148,12 +147,13 @@ var gCom = {
 		}
 	}
 }
+// gCom
 
 var gUI = {
 	init: function () {
 		this.winEvent();
 		this.scrolled.init();
-		
+
 		if ($('.g-js-scroll').length) {
 			this.mScroll.init();
 		}
@@ -217,7 +217,7 @@ var gUI = {
 			}
 		},
 	},
-	
+
 	scrolled: {
 		init: function () {
 			if ($('html').scrollTop() > 50) {
@@ -332,41 +332,38 @@ var gUI = {
 		}
 	}
 }
+//gUI
 
 var darkMode = {
-  init: function() {
-    this.applyTheme();
-    document.querySelector('.dark-mode-btn').addEventListener('click', this.toggleDarkMode.bind(this));
+	init: function () {
+		this.applyTheme();
+		$('.dark-mode-btn').on('click', this.toggleDarkMode.bind(this));
 		this.updateButtonText();
-  },
-  applyTheme: function() {
-    var theme = localStorage.getItem('theme');
-    if (theme) {
-      document.body.classList.add(theme);
-    } else {
-      document.body.classList.add('light-mode');
-    }
-  },
-  toggleDarkMode: function() {
-    var isLightMode = document.body.classList.contains('light-mode');
-    localStorage.setItem('theme', isLightMode ? 'dark-mode' : 'light-mode');
-    document.body.classList.toggle('light-mode');
-    document.body.classList.toggle('dark-mode');
-
+	},
+	applyTheme: function () {
+		var theme = localStorage.getItem('theme');
+		if (theme) {
+			$('body').addClass(theme);
+		} else {
+			$('body').addClass('light-mode');
+		}
+	},
+	toggleDarkMode: function () {
+		var isLightMode = $('body').hasClass('light-mode');
+		localStorage.setItem('theme', isLightMode ? 'dark-mode' : 'light-mode');
+		$('body').toggleClass('light-mode dark-mode');
 		this.updateButtonText();
-  },
-	updateButtonText: function() {
-    var darkModeBtn = document.querySelector('.dark-mode-btn');
-    var isLightMode = document.body.classList.contains('light-mode');
-    darkModeBtn.textContent = isLightMode ? 'Color' : 'Dark';
-  }
+	},
+	updateButtonText: function () {
+		var darkModeBtn = $('.dark-mode-btn');
+		var isLightMode = $('body').hasClass('light-mode');
+		darkModeBtn.text(isLightMode ? 'Color' : 'Dark');
+	}
 };
-// darkMode 객체 초기화
-document.addEventListener('DOMContentLoaded', function() {
-  darkMode.init();
-});
+// darkMode
 
 $(document).ready(function () {
 	gCom.init();
 	gUI.init();
+	darkMode.init();
 })

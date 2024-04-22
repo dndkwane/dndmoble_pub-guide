@@ -15,7 +15,7 @@ var gBaseURL = {
 
 var include = {
 	meta : function(){
-		document.write('<title>dndmobile - 퍼블리싱 가이드</title>');
+		document.write('<title>kiup_banking - 퍼블리싱 가이드</title>');
 		document.write('<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
 		document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />');
 		document.write('<link rel="shortcut icon" href="'+gRootURL.root+'favicon.ico" type="image/x-icon" />');
@@ -25,7 +25,11 @@ var include = {
 		document.write('<!-- Front -->');
 		document.write('<link href="'+gRootURL.root+'css/style.css" rel="stylesheet" />');
 		document.write('<link href="'+gRootURL.root+'css/import.css" rel="stylesheet" />');
+		document.write('<link href="'+gRootURL.root+'css/swiper-bundle.min.css" rel="stylesheet" />');
 		document.write('<script src="'+gRootURL.root+'js/libs/jquery-3.3.1.min.js"></script>');
+		document.write('<script src="'+gRootURL.root+'js/libs/chart.min.js"></script>');
+		document.write('<script src="'+gRootURL.root+'js/libs/swiper-bundle.min.js"></script>');
+		document.write('<script src="'+gRootURL.root+'js/libs/chartjs-plugin-datalabels.js"></script>');
 		document.write('<script src="'+gRootURL.root+'js/pub/pub_utility.js"></script>');
 		document.write('<script src="'+gRootURL.root+'js/pub/pub_device.js"></script>');
 		document.write('<script src="'+gRootURL.root+'js/pub/pub_ui.js"></script>');
@@ -35,6 +39,7 @@ var include = {
 		document.write('<link href="'+gBaseURL._common+'css/import.css" rel="stylesheet" />');
 		document.write('<script src="'+gBaseURL._common+'js/addon/jquery.mCustomScrollbar.min.js"></script>');
 		document.write('<script src="'+gBaseURL._common+'js/addon/jquery.clipboard.min.js"></script>');
+		document.write('<script src="'+gBaseURL._common+'js/addon/jquery-ui.min.js"></script>');
 		document.write('<script src="'+gBaseURL._common+'js/cp_guide.js"></script>');
 	},
 	header : function(){
@@ -133,7 +138,7 @@ var include = {
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_bullet.html">Bullets</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_divider.html">Dividers</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_badge.html">Badge</a></li>');
-			//document.write('							<li class="g-node2"><a href="'+baseURL+'components_images.html">Images</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_coupon.html">Coupon</a></li>');
 			document.write('						</ul>');
 			document.write('						<a href="javascript:;">Forms</a>');
 			document.write('						<ul class="g-depth2">');
@@ -150,6 +155,7 @@ var include = {
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_step.html">Steps</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_table.html">Tables</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_pagination.html">Paginations</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_calendar.html">Calandar</a></li>');
 			document.write('						</ul>');
 			document.write('						<a href="javascript:;">Modules</a>');
 			document.write('						<ul class="g-depth2">');
@@ -161,7 +167,12 @@ var include = {
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_popup.html">Popup</a></li>');
 			//document.write('							<li class="g-node2"><a href="'+baseURL+'components_sticky.html">Sticky</a></li>');
 			document.write('							<li class="g-node2"><a href="'+baseURL+'components_spyscroll.html">Spy Scroll</a></li>');
-			document.write('							<li class="g-node2"><a href="'+baseURL+'components_parallex.html">Parallex</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_parallax.html">Parallax</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_chartjs.html">Chartjs</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_swiper.html">Swiper</a></li>');
+			document.write('							<li class="g-node2"><a href="'+baseURL+'components_datepicker.html">Datepicker</a></li>');
+
+			
 
 			//document.write('							<li class="g-node2"><a href="'+baseURL+'components_customscroll.html">Custom Scroll</a></li>');
 			//document.write('							<li class="g-node2"><a href="'+baseURL+'components_sidebar.html">Sidebar</a></li>');
@@ -230,10 +241,10 @@ var include = {
 	},
 	quick : {
 		init : function(){
-			// this.opneHTML();
+			// this.openHTML();
 			// this.closeHTML();
 		},
-		opneHTML : function(){
+		openHTML : function(){
 			document.write('	<div id="g-quick">');
 			document.write('		<div class="g-js-scroll g-quick-scroll">');
 			document.write('			<nav class="g-qnb">');
@@ -243,12 +254,11 @@ var include = {
 			document.write('		</div>');
 			document.write('	</div>');
 		},
-		
 	},
 	footer : function(){
 		document.write('	<a href="#g-wrapper" class="g-top" data-role="spy-scroll">TOP</a>');
 		document.write('	<body class="dark-mode-wrapper">');
-		document.write('	<button class="dark-mode-btn">컬러모드</button>"');
+		document.write('	<button class="dark-mode-btn">컬러모드</button>');
 		document.write('	<div class="g-mask"></div>');
 	},
 }
